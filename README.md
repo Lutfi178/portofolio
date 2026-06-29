@@ -1,4 +1,4 @@
-# Portofolio Web — [Faris Edrik P / rissss21]
+# Portofolio Web — [Muhammad Lutfi Al Hafizh / Lutfi178]
 
 Selamat datang di portofolio web pribadi saya! 🌐  
 Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya yang ingin saya bagikan.
@@ -16,13 +16,13 @@ Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya y
 
 - Dibangun dengan **React + Vite** — ringan, cepat reload, dan performa build optimal  
 - **ESLint** telah terkonfigurasi agar coding style tetap rapi  
-- Struktur modular dan siap dikembangkan—bisa ditambahkan halaman “About”, “Projects”, dsb.
+- Struktur modular dan siap dikembangkan—bisa ditambahkan halaman "About", "Projects", dsb.
 
 ##  Cara Jalankan
 
 1. Clone repository ini:
 ```bash
-git clone https://github.com/rissss21/portofolio.git
+git clone https://github.com/Lutfi178/portofolio.git
 cd portofolio
 ````
 
@@ -44,18 +44,17 @@ npm run build
 ## &#x20;Quick Preview
 
 Jika sudah di-deploy (contoh: GitHub Pages, Netlify, Vercel), kamu bisa tambahkan link deploy di sini, misalnya:
-[🔗 Lihat versi live](https://username.github.io/portofolio/)
+[🔗 Lihat versi live](https://portofolio-lutfi178.vercel.app/)
 
 ## Tentang Saya
 
-Hai, saya Faris Edrik P (username GitHub: `rissss21`).
+Hai, saya Muhammad Lutfi Al Hafizh (username GitHub: `Lutfi178`).
 Saya seorang Developer yang suka bikin aplikasi web ringan dengan tampilan modern dan performa tinggi. Scroll aja di project saya, dan jangan sungkan untuk reach out kalau ada pertanyaan!
 
-* **Email:** [email\_farisedrik21@gmail.com](mailto:email_farisedrik21@gmail.com)
-* **LinkedIn:** [linkedin.com/in/farisedp](https://www.linkedin.com/in/farisedp/)
-* **Instagram:** @farisedrikprayoga
+* **GitHub:** [github.com/Lutfi178](https://github.com/Lutfi178)
+* **LinkedIn:** [linkedin.com/in/lutfi-cihuyy-3a8b22386](https://www.linkedin.com/in/lutfi-cihuyy-3a8b22386/)
+* **Instagram:** @rexxtarnold
 
 ---
 
-
-[1]: https://github.com/rissss21/portofolio "GitHub - rissss21/portofolio"
+[1]: https://github.com/Lutfi178/portofolio "GitHub - Lutfi178/portofolio"

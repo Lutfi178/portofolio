@@ -142,7 +142,7 @@ export const listTools = [
 import Proyek1 from "/assets/proyek/proyek1.png?v=3";
 import Proyek2 from "/assets/proyek/proyek2.png?v=3";
 import Proyek3 from "/assets/proyek/proyek3.png?v=3";
-import Proyek4 from "/assets/proyek/proyek4.jpg?v=3";
+import Proyek4 from "/assets/proyek/proyek4.png?v=3";
 import Proyek5 from "/assets/proyek/proyek5.png?v=3";
 import Proyek6 from "/assets/proyek/proyek6.jpg?v=3";
 
