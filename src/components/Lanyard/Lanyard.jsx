@@ -8,7 +8,7 @@ import { useLenis } from 'lenis/react';
 import * as THREE from 'three';
 import './Lanyard.css';
 
-const cardGLB = "/portofolio/assets/card.glb";
+const cardGLB = "/assets/card.glb";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
@@ -58,7 +58,7 @@ function Band({ isVisible, maxSpeed = 50, minSpeed = 0 }) {
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3();
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
-  const cardTexture = useTexture("/portofolio/assets/lutfi_card_texture.png?v=7");
+  const cardTexture = useTexture("/assets/lutfi_card_texture.png?v=7");
   cardTexture.flipY = false;
 
   // Generate dynamic canvas texture for the lanyard strap displaying "DEVELOPER"
