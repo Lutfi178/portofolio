@@ -62,7 +62,7 @@ function App() {
               delay={150}
               animateBy="words"
               direction="top"
-              className=" mb-6"
+              className="text-justify mb-6"
             />
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
@@ -109,7 +109,7 @@ function App() {
                   delay={150}
                   animateBy="words"
                   direction="top"
-                  className="text-base md:text-lg leading-relaxed mb-10 text-gray-300"
+                  className="text-justify text-base md:text-lg leading-relaxed mb-10 text-gray-300"
                 />
 
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
