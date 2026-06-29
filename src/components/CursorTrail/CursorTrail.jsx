@@ -23,12 +23,21 @@ export default function CursorTrail() {
       mouse.y = e.clientY;
     };
 
+    const handleTouchMove = (e) => {
+      if (e.touches && e.touches.length > 0) {
+        mouse.x = e.touches[0].clientX;
+        mouse.y = e.touches[0].clientY;
+      }
+    };
+
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
     };
 
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchstart', handleTouchMove, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('resize', handleResize);
 
     const draw = () => {
@@ -80,6 +89,8 @@ export default function CursorTrail() {
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchstart', handleTouchMove);
+      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
       const styleElement = document.getElementById('custom-cursor-hide-style');
