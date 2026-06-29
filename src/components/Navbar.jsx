@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 
 const Navbar = ({ hidden = false }) => {
-  // ⛔ Saat hidden, jangan render apa pun
-  if (hidden) return null;
-
   const [active, setActive] = useState(false);
 
   useEffect(() => {
+    if (hidden) return;
     const handleScroll = () => setActive(window.scrollY > 150);
     handleScroll(); // init posisi saat mount
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [hidden]);
+
+  // ⛔ Saat hidden, jangan render apa pun
+  if (hidden) return null;
 
   return (
     <nav className="navbar relative z-50 py-7 flex items-center justify-between px-6 md:px-12">

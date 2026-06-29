@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { auth, loginWithGoogle, logout, db } from "../firebase";
+import { auth, loginWithGoogle, logout, db, isFirebaseConfigured } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import {
   collection,
@@ -17,18 +17,21 @@ export default function ChatRoom() {
 
   // Cek login
   useEffect(() => {
+    if (!isFirebaseConfigured || !auth) return;
     const unsub = onAuthStateChanged(auth, (u) => setUser(u));
     return () => unsub();
   }, []);
 
   // Ambil pesan real-time
   useEffect(() => {
+    if (!isFirebaseConfigured || !db) return;
     const q = query(collection(db, "messages"), orderBy("createdAt"));
     const unsub = onSnapshot(q, (snapshot) => {
       setMessages(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
     return () => unsub();
   }, []);
+
 
   // Kirim pesan
   const sendMessage = async (e) => {
@@ -44,6 +47,18 @@ export default function ChatRoom() {
     });
     setMessage("");
   };
+
+  if (!isFirebaseConfigured) {
+    return (
+      <div className="bg-zinc-900 border border-gray-700 p-6 rounded-xl shadow-lg max-w-xl mx-auto mt-5 text-center">
+        <h2 className="text-2xl font-bold text-center mb-4 text-white">💬 Chat Room</h2>
+        <div className="text-yellow-500 font-semibold mb-2">Firebase is not configured</div>
+        <p className="text-sm text-gray-400">
+          To enable the real-time chat room, update your Firebase credentials in <code className="bg-zinc-800 px-1.5 py-0.5 rounded text-violet-400">src/firebase.js</code>.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-zinc-900 border border-gray-700 p-6 rounded-xl shadow-lg max-w-xl mx-auto mt-5">

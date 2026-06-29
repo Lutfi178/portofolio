@@ -299,6 +299,7 @@ const ProfileCardComponent = ({
               className="avatar"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
+              style={{ height: "100%", objectFit: "cover", bottom: 0 }}
               loading="lazy"
               onError={(e) => {
                 const target = e.target;

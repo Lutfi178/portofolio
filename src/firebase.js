@@ -6,20 +6,35 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "",
   authDomain: "",
-  projectId: ",
+  projectId: "",
   storageBucket: "",
   messagingSenderId: "",
   appId: ""
 };
 
-// Init Firebase
-const app = initializeApp(firebaseConfig);
+// Init Firebase check
+export const isFirebaseConfigured = !!(firebaseConfig.apiKey && firebaseConfig.projectId);
 
-// Auth
-export const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-export const loginWithGoogle = () => signInWithPopup(auth, provider);
-export const logout = () => signOut(auth);
+let app = null;
+let auth = null;
+let db = null;
+let loginWithGoogle = () => Promise.resolve(null);
+let logout = () => Promise.resolve(null);
 
-// Firestore
-export const db = getFirestore(app);
+if (isFirebaseConfigured) {
+  try {
+    app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    loginWithGoogle = () => signInWithPopup(auth, provider);
+    logout = () => signOut(auth);
+    db = getFirestore(app);
+  } catch (error) {
+    console.error("Error initializing Firebase:", error);
+  }
+} else {
+  console.warn("Firebase: Credentials are not configured. Chat features will be disabled.");
+}
+
+export { auth, db, loginWithGoogle, logout };
+
