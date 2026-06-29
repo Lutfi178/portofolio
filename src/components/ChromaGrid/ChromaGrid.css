@@ -88,7 +88,7 @@
 .chroma-img-wrapper {
   position: relative;
   z-index: 1;
-  flex: 1;
+  aspect-ratio: 16 / 10;
   padding: 10px;
   box-sizing: border-box;
   background: transparent;
