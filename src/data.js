@@ -14,6 +14,10 @@ import Tools19 from "/assets/tools/mysql.png";
 import LaravelLogo from "/assets/tools/laravel.png";
 import PythonLogo from "/assets/tools/python.png";
 import JavaLogo from "/assets/tools/java.png";
+import ArduinoLogo from "/assets/tools/arduino.svg";
+import CppLogo from "/assets/tools/cpp.svg";
+import GitLogo from "/assets/tools/git.svg";
+import PostmanLogo from "/assets/tools/postman.svg";
 
 
 export const listTools = [
@@ -128,6 +132,34 @@ export const listTools = [
     nama: "MySql",
     ket: "Framework",
     dad: "1600",
+  },
+  {
+    id: 17,
+    gambar: ArduinoLogo,
+    nama: "Arduino IDE",
+    ket: "Electronics & IoT",
+    dad: "1700",
+  },
+  {
+    id: 18,
+    gambar: CppLogo,
+    nama: "C++",
+    ket: "Language",
+    dad: "1800",
+  },
+  {
+    id: 19,
+    gambar: GitLogo,
+    nama: "Git",
+    ket: "Version Control",
+    dad: "1900",
+  },
+  {
+    id: 20,
+    gambar: PostmanLogo,
+    nama: "Postman",
+    ket: "API Client",
+    dad: "2000",
   },
 ];
 
