@@ -168,7 +168,7 @@ import Proyek2 from "/assets/proyek/proyek2.png?v=3";
 import Proyek3 from "/assets/proyek/proyek3.png?v=3";
 import Proyek4 from "/assets/proyek/proyek4.png?v=3";
 import Proyek5 from "/assets/proyek/proyek5.png?v=3";
-import Proyek6 from "/assets/proyek/proyek6.jpg?v=3";
+import Proyek6 from "/assets/proyek/proyek6.png?v=3";
 
 export const listProyek = [
   {
@@ -229,12 +229,12 @@ export const listProyek = [
   {
     id: 6,
     image: Proyek6,
-    title: "Project 6 (Coming Soon)",
-    subtitle: "Under development...",
-    fullDescription: "Stay tuned! I am constantly working on new projects and learning new technologies to build better digital experiences.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "#",
+    title: "Personal Portfolio Website",
+    subtitle: "A premium developer portfolio showcasing projects and skills...",
+    fullDescription: "A highly interactive, modern developer portfolio website built using React, Vite, Tailwind CSS, Three.js (React Three Fiber), Framer Motion, and GSAP. It features dynamic 3D elements, customizable components, smooth scrolling, and responsiveness to showcase professional work and skills.",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(145deg, #8B5CF6, #000)",
+    url: "https://github.com/Lutfi178/portofolio",
     dad: "600",
   }
 ];
